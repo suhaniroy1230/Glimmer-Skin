@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Glimmer Skin Care</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+    <script src="add to card.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+          <div class="container2">
+              <div class="top-bar">
+                  <div class="contact-info">
+                      <a href="tel:+917043483699"><i class="fa fa-phone"></i> +91 7043 483 699</a>
+                      <a href="mailto:info@glimmerskincare.com"><i class="fa fa-envelope"></i> mailto:info@glimmerskincare.com</a>
+                  </div>
+                  <div class="social-icons">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-pinterest"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="header-bottom">
+          <div class="container">
+              <div class="nav-bar">
+                  <div class="logo">
+                      <a href="index.html">
+                          <img src="Assest/icon/logo.png" alt="Glimmer Skin Care">
+                      </a>
+                  </div>
+                  <div class="hamburger-menu" onclick="toggleMenu()">
+                      <i class="fa fa-bars"></i>
+                  </div>
+                  <nav class="main-menu">
+                      <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li class="dropdown">
+                              <a href="index.html">Collection</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="Sellers.html">Best Sellers</a></li>
+                                  <li><a href="Skincare Sets.html">Skincare Sets</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="Contact.html">Contact</a></li>
+                      </ul>
+                  </nav>
+                  <ul>
+                  <li class="mobile-icons">
+                    <a href="#" class="search-toggle"><i class="fa fa-search"></i></a>
+                    <a href="add-to-cart.html" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+              </div>
+          </div>
+      </div>
+  </header>
+    
+    <div class="hero-item">
+      <div class="container-1">
+        <div class="row">
+          <div class="col-12">
+            <div class="hero-content-3">
+              <h2>Rejuvenate Your Skin</h2>
+              <h1>Premium Skin Care Treatments</h1>
+              <h3>Glow with Confidence</h3>
+              <a href="Sellers.html" class="btn-shop">Shop Our Collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section">
+      <div class="section-title">Our Featured Products</div>
+      <div class="slider-wrapper">
+        <button id="prev" class="slider-btn">&#10094;</button>
+        <div class="product-slider">
+          <div class="product">
+            <img src="Assest/image/product5.jpg" alt="Product 1" />
+            <h3>Glimmer Skin</h3>
+            <p class="price">
+              <span class="new">₹300</span> <span class="old">₹500</span>
+            </p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Assest/image/product3.png" alt="Product 2" />
+            <h3>Cream</h3>
+            <p class="price"><span class="new">₹250.00</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Assest/image/product7.jpg" alt="Product 3" />
+            <h3>Moisturizer</h3>
+            <p class="price">
+              <span class="new">₹400</span><span class="old">₹800</span>
+            </p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Assest/image/product6.jpg" alt="Product 4" />
+            <h3>Face Serum</h3>
+            <p class="price"><span class="new">₹700</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Assest/image/product8.jpg" alt="Product 4" />
+            <h3>Shampoo</h3>
+            <p class="price">
+              <span class="new">₹200</span><span class="old">₹350</span>
+            </p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Assest/image/product9.jpg" alt="Product 4" />
+            <h3>Cleanser</h3>
+            <p class="price"><span class="new">₹280</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Assest/image/product10.jpg" alt="Product 4" />
+            <h3>Foot Cream</h3>
+            <p class="price"><span class="new">₹150</span></p>
+            <button class="btn">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="Assest/image/product1.png" alt="Product 4" />
+            <h3>Glimmer Skin serum</h3>
+            <p class="price">
+              <span class="new">₹550</span> <span class="old">₹750</span>
+            </p>
+            <button class="btn">Add to Cart</button>
+          </div>
+        </div>
+        <button id="next" class="slider-btn">&#10095;</button>
+      </div>
+    </section>
+
+    <div class="deal-product-section">
+      <div class="deal-container">
+        <div class="deal-image">
+          <img
+            src="Assest/image/product12.png"
+            alt="Glimmer Skin Care Product"
+          />
+        </div>
+        <div class="deal-content">
+          <h1><span style="color: #eca8a8">HOT</span> <strong>DEAL</strong></h1>
+          <p>
+            Discover exclusive skincare deals from Glimmer Skin Care. Limited
+            time only!
+          </p>
+
+          <div class="countdown">
+            <span id="days"></span>
+            <span id="hours"></span>
+            <span id="minutes"></span>
+            <span id="seconds"></span>
+          </div>
+
+
+
+          <a href="Sellers.html">Shop collection now!</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section">
+      <div class="section-title">Our Best Seller Products</div>
+      <div class="product-list">
+        <div class="product">
+          <img src="Assest/image/product14.jpg" alt="Product 1" />
+          <h3>Skin Care</h3>
+          <p class="price">
+            <span class="new">₹300</span> <span class="old">₹500</span>
+          </p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="Assest/image/product15.jpg" alt="Product 2" />
+          <h3>Facial Cream</h3>
+          <p class="price"><span class="new">₹250.00</span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="Assest/image/product16.jpg" alt="Product 3" />
+          <h3>Facial Serum</h3>
+          <p class="price">
+            <span class="new">₹400</span><span class="old">₹800</span>
+          </p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="Assest/image/product17.jpg" alt="Product 4" />
+          <h3>Facial Cleanser</h3>
+          <p class="price"><span class="new">₹700</span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-bg">
+      <div class="hero-content">
+        <h2>Glow with Confidence!</h2>
+        <h1>RADIANT SKIN SOLUTIONS</h1>
+        <h3>REVITALIZE YOUR BEAUTY</h3>
+        <a href="Sellers.html" class="cta-btn">Shop collection now!</a>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="section-title">Our Best Skincare Products</div>
+      <div class="product-list">
+        <div class="product">
+          <img src="Assest/image/product2.webp" alt="Product 1" />
+          <h3>Glow Revive serum</h3>
+          <p class="price">
+            <span class="new">₹300</span> <span class="old">₹500</span>
+          </p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="Assest/image/product4.webp" alt="Product 2" />
+          <h3>Foot Cream</h3>
+          <p class="price"><span class="new">₹250.00</span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="Assest/image/product11.webp" alt="Product 3" />
+          <h3>Oil-Free Moisturizer</h3>
+          <p class="price">
+            <span class="new">₹400</span><span class="old">₹800</span>
+          </p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="Assest/image/Product13.jpg" alt="Product 4" />
+          <h3>Soothing Moisturizer</h3>
+          <p class="price"><span class="new">₹700</span></p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="discount-section">
+      <div class="discount-overlay"></div>
+      <div class="discount-content">
+        <h2>GET <span>10%</span> DISCOUNT</h2>
+        <p>
+          Subscribe to the Glimmer Skin Care mailing list to receive updates on
+          new arrivals, special offers, and other discount information.
+        </p>
+        <div class="email-form">
+          <input type="email" placeholder="Your email address here" />
+          <button>SUBSCRIBE</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="brand-container">
+      <div class="brand1">
+        <img src="Assest/image/sponsor1 .png" alt="GlowEssence" />
+      </div>
+      <div class="brand2">
+        <img src="Assest/image/sponsor2.png" alt="PureDew" />
+      </div>
+      <div class="brand3">
+        <img src="Assest/image/sponsor5.png" alt="LumiGlow" />
+      </div>
+      <div class="brand4">
+        <img src="Assest/image/sponsor4.svg" alt="RadiantTouch" />
+      </div>
+      <div class="brand5">
+        <img src="Assest/image/sponsor3.png" alt="NatureBliss" />
+      </div>
+    </div>
+
+    <div class="image-section">
+      <div class="image-container">
+        <img src="Assest/image/image1.jpg" alt="Skincare Model" />
+        <div class="overlay"></div>
+        <div class="text-content">
+          <p>Glow with Every Point You Earn!</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="Assest/image/image2.jpeg" alt="Makeup Palette" />
+        <div class="overlay"></div>
+        <div class="text-content">
+          <p>Beauty Points, Gorgeous Perks!</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="Assest/image/image3.webp" alt="Beauty Squad" />
+        <div class="overlay"></div>
+        <div class="text-content">
+          <p>Your Beauty, Your Points, Your Perks!</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>ABOUT GLIMMER SKIN</h3>
+          <p>
+            Discover the essence of natural beauty with our premium skincare
+            products. We bring you the best in skincare, designed to nourish and
+            revitalize your skin.
+          </p>
+          <div class="social-icons1">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>INFORMATION</h3>
+          <ul>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Mobile</a></li>
+            <li><a href="#">Unsubscribe Notification</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>OUR OFFERS</h3>
+          <ul>
+            <li><a href="#">New Products</a></li>
+            <li><a href="#">Top Sellers</a></li>
+            <li><a href="#">Specials</a></li>
+            <li><a href="#">Manufacturers</a></li>
+            <li><a href="#">Suppliers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>CONTACT US</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 123 Skincare Street, Beauty
+            City, INDIA
+          </p>
+          <p><i class="fas fa-phone-alt"></i> (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> support@glimmerskin.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2025 Glimmer Skin. All rights reserved.</p>
+        <p class="brand-name">Glimmer <span>Skin</span></p>
+      </div>
+    </footer>
+  </body>
+</html>
