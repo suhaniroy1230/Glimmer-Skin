@@ -14,7 +14,6 @@ body {
 }
 
 
-
 .header {
     background-color: #d3aeae;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -141,6 +140,24 @@ body {
     display: none;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.header-actions a {
+    color: #000;
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.header-actions a:hover {
+    color: #5b2525;
+}
+
+
 
 @media (max-width: 800px) {
     .header-top {
@@ -154,14 +171,14 @@ body {
     .hamburger-menu {
         display: block;
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 39px;
+        top: 32px;
     }
 
     .main-menu {
         display: none; 
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         width: 100%;
         background: #e1c9c9;
@@ -203,6 +220,7 @@ body {
         justify-content: center;
         gap: 15px;
         padding-top: 10px;
+        margin-right: 10px;
     }
 
     .mobile-icons a {
@@ -212,6 +230,31 @@ body {
 
     .mobile-icons a:hover {
         color: #5b2525;
+    }
+}
+@media (max-width: 700px) {
+    .hamburger-menu {
+        right: 30px;
+    }
+}
+@media (max-width: 600px) {
+    .hamburger-menu {
+        right: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .hamburger-menu {
+        right: 10px;
+    }
+}
+@media (max-width: 400px) {
+    .hamburger-menu {
+        right: 10px;
+    }
+}
+@media (max-width: 320px) {
+    .hamburger-menu {
+        right: 10px;
     }
 }
 
@@ -357,6 +400,7 @@ body {
     }
 }
 
+
 .product-section {
     margin: 50px auto;
     text-align: center;
@@ -425,48 +469,48 @@ body {
     background: #e91e63; 
 } 
 
-    .price .new { 
-        color: #7d2e2e; 
-        font-weight: bold; 
-        background: #e47a7a91; 
+.price .new { 
+    color: #7d2e2e; 
+    font-weight: bold; 
+    background: #e47a7a91; 
+}
+
+.price .old { 
+    text-decoration: line-through; 
+    color: #888; 
     }
 
-    .price .old { 
-        text-decoration: line-through; 
-        color: #888; 
-    }
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #d17d7d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
 
-    .btn {
-        display: inline-block;
-        padding: 10px 15px;
-        background: #d17d7d;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
+.btn:hover {
+    background: #bb6c6c;
+    color: #000;
+}
 
-    .btn:hover {
-        background: #bb6c6c;
-        color: #000;
-    }
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
 
-    .slider-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        cursor: pointer;
-        border-radius: 5px;
-        z-index: 10;
-    }
-
-    #prev { left: 10px; }
-    #next { right: 10px; }
+#prev { left: 10px; }
+#next { right: 10px; }
 
 
 @media (max-width: 1024px) {
@@ -517,7 +561,6 @@ body {
         font-size: 14px;
     }
 }
-
 
 
 @media (max-width: 480px) {
@@ -748,8 +791,6 @@ body {
     transform: scale(1.05);
 }
 
-
-
 .product img {
     width: 100%;
     height: auto;
@@ -943,73 +984,6 @@ body {
         padding: 8px 15px;
     }
 }
-
-
-/* .hero-bg {
-    background-image: url('Assest/image/background2.png'); 
-    height: 394px;
-}
-
-.hero-content h2 {
-    font-style: italic;
-    color: #c87777;
-    font-size: 45px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    margin-top: 104px;
-    margin-left: 516px;
-}
-
-.hero-content h1 {
-    font-size: 28px;
-    font-weight: 300;
-    color: #777777;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    margin-left: 578px;
-}
-
-.hero-content h3 {
-    font-size: 23px;
-    font-weight: bold;
-    color: #333333;
-    text-transform: uppercase;
-    margin-left: 605px;
-}
-
-.hero-content .cta-btn {
-    color: #333333;
-    font-size: 18px;
-    font-weight: 600;
-    display: inline-block;
-    padding: 12px 24px;
-    margin-bottom: 145px;
-    margin-left: 640px;
-    margin-top: 15px;
-    background-color: #e3abab;
-    border-radius: 8px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-}
-
-.hero-content .cta-btn:hover {
-    background-color: #994646;
-    color: white;
-}
-
-.hero-content {
-    display: table-row;
-}
-
-a, button {
-    color: inherit;
-    display: inline-block;
-    line-height: inherit;
-    text-decoration: none;
-    cursor: pointer;
-} */
-
-
 
 
 
@@ -1308,7 +1282,78 @@ a, button {
 }
 
 
+@media (max-width: 768px) {
+    .brand-container {
+        gap: 30px;
+    }
 
+    .brand img {
+        width: 180px; 
+        height: auto;  
+    }
+
+    .brand1 img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .brand2 img {
+        width: 220px;
+        height: 80px;
+    }
+
+    .brand3 img {
+        width: 140px;
+        height: 80px;
+    }
+
+    .brand4 img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .brand5 img {
+        width: 130px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-container {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .brand img {
+        width: 150px;  
+        height: auto;
+    }
+
+    .brand1 img {
+        width: 90px;
+        height: 100px;
+    }
+
+    .brand2 img {
+        width: 180px;
+        height: 70px;
+    }
+
+    .brand3 img {
+        width: 120px;
+        height: 70px;
+    }
+
+    .brand4 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .brand5 img {
+        width: 120px;
+        height: 60px;
+    }
+}
 
 
 
@@ -1372,7 +1417,6 @@ a, button {
 .image-container:hover .text-content {
     opacity: 1;
 }
-
 
 .shop-btn {
     background: #c48484;

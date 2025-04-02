@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Contact.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <script src="contact.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
@@ -14,11 +15,9 @@
       <div class="header-top">
         <div class="container2">
           <div class="top-bar">
-            <div class="contact-info1">
-              <a href="tel:+081234567890">
-                <i class="fa fa-phone"></i> (08) 123 456 7890</a>
-              <a href="mailto:info@glimmerskincare.com">
-                <i class="fa fa-envelope"></i> info@glimmerskincare.com</a>
+            <div class="contact-info">
+              <a href="tel:+917043483699"><i class="fa fa-phone"></i> +91 7043 483 699</a>
+              <a href="mailto:info@glimmerskincare.com"><i class="fa fa-envelope"></i> mailto:info@glimmerskincare.com</a>
             </div>
             <div class="social-icons">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -33,7 +32,12 @@
         <div class="container">
           <div class="nav-bar">
             <div class="logo">
-              <a href="index.html"><img src="Assest/icon/logo.png" alt="Glimmer Skin Care"/></a>
+              <a href="index.html">
+                <img src="Assest/icon/logo.png" alt="Glimmer Skin Care">
+              </a>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+              <i class="fa fa-bars"></i>
             </div>
             <nav class="main-menu">
               <ul>
@@ -52,12 +56,12 @@
             <div class="header-actions">
               <a href="#" class="search-toggle"><i class="fa fa-search"></i></a>
               <a href="add to card.html" class="cart-icon"><i class="fa fa-shopping-cart"></i></a>
-              </a>
             </div>
           </div>
         </div>
       </div>
     </header>
+  
 
     <section class="contact-section">
       <h2 class="section-title">Contact Us</h2>
