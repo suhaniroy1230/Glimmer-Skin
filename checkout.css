@@ -498,17 +498,6 @@ margin-left: 10px;
         background: #bbb;
     }
 
-    .remove-btn {
-        position: absolute;
-        top: -19px;
-        right: -170px;
-        background: none;
-        border: none;
-        color: red;
-        font-size: 15px;
-        cursor: pointer;
-    }
-
     button {
         background: #db6f6f;
         color: white;
@@ -614,7 +603,7 @@ margin-left: 10px;
         max-height: 150px;
     }
     .cart-item {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
     }
     .cart-item img {
@@ -624,11 +613,7 @@ margin-left: 10px;
     .cart-item-info {
         font-size: 14px;
     }
-    .remove-btn {
-        top: -18px;
-        right: -192px;
-        font-size: 12px;
-    }
+
 }
 
 
