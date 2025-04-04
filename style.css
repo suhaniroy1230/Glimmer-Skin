@@ -1725,6 +1725,7 @@ footer {
 .footer-column ul {
     font-size: 14px;
     line-height: 1.6;
+    padding-bottom: 10px;
 }
 
 .footer-column ul {
