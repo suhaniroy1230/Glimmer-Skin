@@ -21,7 +21,7 @@ body {
 }
 
 .header-top {
-    background-color: #e1c9c9;
+    background-color: #fff;
     padding: 5px 0;
 }
 
@@ -41,10 +41,21 @@ body {
 }
 
 .contact-info a {
+    display: inline-flex;
+    align-items: center;
     color: #000;
     text-decoration: none;
     font-size: 14px;
     margin-right: 20px;
+}
+
+.contact-info i {
+    font-size: 16px;
+    margin-right: 8px; 
+}
+
+.contact-info i {
+    font-size: 16px;
 }
 
 .contact-info a:hover {
@@ -59,7 +70,19 @@ body {
 }
 
 .social-icons a:hover {
-    color: #5b2525;
+    color: #4d4545;
+}
+
+.fa{
+color: #181313;
+font-size: 20px;
+margin-left: 10px;
+}
+
+.fa-solid {
+    color: #181313;
+    font-size: 20px;
+    margin-left: 10px;  
 }
 
 .header-bottom {
@@ -157,6 +180,8 @@ body {
 .header-actions a:hover {
     color: #5b2525;
 }
+
+
 
 @media (max-width: 800px) {
     .header-top {
@@ -259,7 +284,6 @@ body {
 
 
 
-
 .product-section {
     margin: 50px auto;
     text-align: center;
@@ -272,20 +296,14 @@ body {
 }
 
 .product {
-    position: relative;
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    text-align: left;
 }
 
 .product:hover {
     transform: scale(1.05);
 }
-
-
 
 .product img {
     width: 100%;
@@ -297,6 +315,7 @@ body {
     font-size: 1.1em;
     font-weight: bold;
     color: #c46c6c;
+    margin-top: 10px;
 }
 
 .price .new {
@@ -406,7 +425,7 @@ body {
 }
 
 .discount-button:hover {
-    background-color: #c78b8b;
+    background-color: #960f0f;
 }
 
 

@@ -20,7 +20,7 @@ body {
 }
 
 .header-top {
-    background-color: #e1c9c9;
+    background-color: #fff;
     padding: 5px 0;
 }
 
@@ -40,10 +40,21 @@ body {
 }
 
 .contact-info a {
+    display: inline-flex;
+    align-items: center;
     color: #000;
     text-decoration: none;
     font-size: 14px;
     margin-right: 20px;
+}
+
+.contact-info i {
+    font-size: 16px;
+    margin-right: 8px; 
+}
+
+.contact-info i {
+    font-size: 16px;
 }
 
 .contact-info a:hover {
@@ -58,7 +69,19 @@ body {
 }
 
 .social-icons a:hover {
-    color: #5b2525;
+    color: #4d4545;
+}
+
+.fa{
+color: #181313;
+font-size: 20px;
+margin-left: 10px;
+}
+
+.fa-solid {
+    color: #181313;
+    font-size: 20px;
+    margin-left: 10px;  
 }
 
 .header-bottom {
@@ -156,7 +179,6 @@ body {
 .header-actions a:hover {
     color: #5b2525;
 }
-
 
 
 @media (max-width: 800px) {
@@ -267,22 +289,24 @@ body {
     background-position: center;
     height: 660px; 
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-start; 
     align-items: center;
-    text-align: center; 
+    text-align: left; 
     color: #fff;
-    padding-right: 30px;
+    padding-left: 30px;
 }
 
-.container-1{
+.container-1 {
     width: 90%;
     margin-bottom: -73px;
 }
+
 .hero-content-3 {
     max-width: 800px;
     padding: 20px;
     padding-bottom: 91px;
     color: #000;
+    padding-left: 146px;
 }
 
 .hero-content-3 h2 {
@@ -299,10 +323,12 @@ body {
     letter-spacing: 1.5px;
 }
 
-.hero-content-3 h3 {
-    font-size: 20px;
+.hero-content-3 .info-text {
+    font-size: 15px;
     font-weight: 400;
-    margin-bottom: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    max-width: 600px;
 }
 
 .hero-content-3 .btn-shop {
@@ -310,10 +336,11 @@ body {
     background-color: #e47a7a91; 
     color: #000;
     padding: 12px 30px;
-    border-radius: 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    display: inline-block;
 }
 
 .hero-content-3 .btn-shop:hover {
@@ -321,12 +348,19 @@ body {
     color: #fff;
 }
 
+.hero-content-3 .extra-line {
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+    margin-top: 15px;
+}
 
+/* Responsive */
 @media (max-width: 992px) {
     .hero-item {
-        height: 500px; 
-        justify-content: center; 
-        padding-right: 0;
+        height: 500px;
+        justify-content: center;
+        padding-left: 0;
     }
 
     .hero-content-3 {
@@ -345,12 +379,16 @@ body {
     .hero-content-3 h3 {
         font-size: 18px;
     }
+
+    .hero-content-3 .info-text, .hero-content-3 .extra-line {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
     .hero-item {
         height: 450px;
-        padding: 0 15px; 
+        padding: 0 15px;
     }
 
     .hero-content-3 {
@@ -359,7 +397,7 @@ body {
     }
 
     .hero-content-3 h1 {
-        font-size: 28px; 
+        font-size: 28px;
     }
 
     .hero-content-3 h2 {
@@ -367,6 +405,10 @@ body {
     }
 
     .hero-content-3 h3 {
+        font-size: 16px;
+    }
+
+    .hero-content-3 .info-text {
         font-size: 16px;
     }
 
@@ -378,7 +420,7 @@ body {
 
 @media (max-width: 480px) {
     .hero-item {
-        height: 380px; 
+        height: 380px;
         background-position: center center;
     }
 
@@ -394,11 +436,22 @@ body {
         font-size: 14px;
     }
 
+    .hero-content-3 .info-text {
+        font-size: 14px;
+    }
+
     .hero-content-3 .btn-shop {
         font-size: 14px;
         padding: 8px 20px;
     }
+
+    .hero-content-3 .extra-line {
+        font-size: 14px;
+    }
 }
+
+
+
 
 
 .product-section {
@@ -416,20 +469,24 @@ body {
 .slider-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: relative;
     overflow: hidden;
     margin-top: 85px;
 }
 
 .product-slider {
+    width: 100%;
     display: flex;
     gap: 20px;
     padding: 10px;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    width: 80%;
     scrollbar-width: none;
+}
+
+.product {
+    min-width: calc(100% / 5 - 20px); 
 }
 
 .product-slider::-webkit-scrollbar {
@@ -437,13 +494,9 @@ body {
 }
 
 .product {
-    background: white;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 250px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    text-align: left;
+    width: 230px;
 }
 
 .product:hover {
@@ -472,7 +525,6 @@ body {
 .price .new { 
     color: #7d2e2e; 
     font-weight: bold; 
-    background: #e47a7a91; 
 }
 
 .price .old { 
@@ -591,7 +643,23 @@ body {
     }
 }    
 
+@media (max-width: 1024px) {
+    .product {
+        min-width: calc(100% / 4 - 20px); 
+    }
+}
 
+@media (max-width: 768px) {
+    .product {
+        min-width: calc(100% / 3 - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        min-width: calc(100% / 2 - 20px); 
+    }
+}
 
 
 
@@ -603,6 +671,7 @@ body {
     text-align: center;
     margin-bottom: 55px;
     padding: 20px;
+    background: #bea8a252;
 }
 
 .deal-container {
@@ -778,12 +847,8 @@ body {
 
 .product {
     position: relative;
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+    text-align: left;
     width: 230px;
 }
 
@@ -986,6 +1051,161 @@ body {
 }
 
 
+.about-section {
+    width: 80%;
+    margin: auto;
+    padding: 45px 10px
+}
+
+.about-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Slider wrapper */
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Slider track */
+.treatment-slider {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Individual treatment card */
+.treatment-card {
+    min-width: 30%;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Hover effect (optional) */
+.treatment-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image inside card */
+.treatment-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Title */
+.treatment-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Description */
+.treatment-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Slider arrows */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 15;
+}
+
+#prev-treatment {
+    left: 10px;
+}
+
+#next-treatment {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .treatment-card {
+        min-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .treatment-card {
+        min-width: 90%;
+    }
+
+    .about-section h2 {
+        font-size: 22px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f1e7e473;
+}
+
+.info-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.info-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #000;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
 
 .product-section {
     text-align: center;
@@ -997,6 +1217,8 @@ body {
     font-size: 2em;
     margin-bottom: -55px;
     color: #c46c6c;
+    text-align: left;
+    margin-left: 26px;
 }
 
 .product-grid {
@@ -1039,6 +1261,7 @@ body {
     font-size: 1.1em;
     font-weight: bold;
     color: #c46c6c;
+    padding-top: 10px;
 }
 
 .cart-btn {

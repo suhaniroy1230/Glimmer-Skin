@@ -20,12 +20,17 @@ html,body{
 }
 
 .header-top {
-    background-color: #e1c9c9;
+    background-color: #fff;
     padding: 5px 0;
 }
 
 .container2 {
     margin: 0px 25px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .top-bar {
@@ -35,10 +40,21 @@ html,body{
 }
 
 .contact-info a {
+    display: inline-flex;
+    align-items: center;
     color: #000;
     text-decoration: none;
     font-size: 14px;
     margin-right: 20px;
+}
+
+.contact-info i {
+    font-size: 16px;
+    margin-right: 8px; 
+}
+
+.contact-info i {
+    font-size: 16px;
 }
 
 .contact-info a:hover {
@@ -53,7 +69,19 @@ html,body{
 }
 
 .social-icons a:hover {
-    color: #5b2525;
+    color: #4d4545;
+}
+
+.fa{
+color: #181313;
+font-size: 20px;
+margin-left: 10px;
+}
+
+.fa-solid {
+    color: #181313;
+    font-size: 20px;
+    margin-left: 10px;  
 }
 
 .header-bottom {
@@ -134,7 +162,6 @@ html,body{
 .mobile-icons {
     display: none;
 }
-
 .header-actions {
     display: flex;
     align-items: center;
@@ -153,13 +180,12 @@ html,body{
 }
 
 
-
 @media (max-width: 800px) {
     .header-top {
         display: none; 
     }
 
-    .nav-bar {    
+    .nav-bar {
         justify-content: space-between;
     }
 
@@ -254,21 +280,10 @@ html,body{
 }
 
 
-
-
-
    
 
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f5f2;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
+.container6 {
     display: flex;
     align-items: center;
     justify-content: center;
