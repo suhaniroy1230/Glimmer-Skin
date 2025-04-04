@@ -1,49 +1,68 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  let cartContainer = document.getElementById("cart-items");
-  let totalPriceElement = document.getElementById("total-price");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartContainer = document.getElementById("cart-items");
+    const totalPriceElement = document.getElementById("total-price");
 
-  if (!cartContainer || !totalPriceElement) {
-      console.error("Cart container or total price element not found!");
-      return;
-  }
+    function calculateTotal() {
+        let total = 0;
+        cart.forEach(item => {
+            const priceNumber = parseInt(String(item.price).replace("₹", "")) || 0;
+            total += priceNumber * (item.quantity || 1);
+        });
+        return total;
+    }
 
-  let totalPrice = 0;
+    function renderCart() {
+        cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  if (cart.length === 0) {
-      cartContainer.innerHTML = "<p>Your cart is empty</p>";
-  } else {
-      cartContainer.innerHTML = cart
-          .map((item, index) => {
-              let priceNumber = parseInt(String(item.price).replace("₹", "")) || 0;
-              totalPrice += priceNumber * (item.quantity || 1);
+        if (!cartContainer) return;
 
-              return `
-                  <div class="cart-item">
-                      <img src="${item.image}" width="50">
-                      <p>${item.title}</p>
-                      <p>${item.price}</p>
-                      <button onclick="removeItem(${index})">Remove</button>
-                  </div>
-              `;
-          })
-          .join("");
-  }
+        if (cart.length === 0) {
+            cartContainer.innerHTML = "<p>Your cart is empty</p>";
+            if (totalPriceElement) totalPriceElement.innerText = "₹0";
+            return;
+        }
 
-  totalPriceElement.innerText = `₹${totalPrice}`;
+        cartContainer.innerHTML = cart.map((item, index) => `
+            <div class="cart-item">
+                <img src="${item.image}" width="100" height="100" style="border-radius: 8px; object-fit: cover;">
+                <p class="cart-title">${item.title}</p>
+                <p class="cart-price">${item.price}</p>
+                <button class="remove-btn" data-index="${index}">Remove</button>
+            </div>
+        `).join("");
+
+        document.querySelectorAll(".remove-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                const index = parseInt(this.getAttribute("data-index"));
+                removeItem(index);
+            });
+        });
+
+        if (totalPriceElement) {
+            totalPriceElement.innerText = `₹${calculateTotal()}`;
+        }
+    }
+
+    function removeItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+    }
+
+    renderCart();
 });
 
 
 
-// Function to update the cart display dynamically
 function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (index >= 0 && index < cart.length) {
-        cart.splice(index, 1); // Remove item from array
-        localStorage.setItem("cart", JSON.stringify(cart)); // Update local storage
+        cart.splice(index, 1); 
+        localStorage.setItem("cart", JSON.stringify(cart)); 
         
-        renderCart(); // Re-render cart items dynamically
+        renderCart(); 
     } else {
         console.error("Invalid index:", index);
     }
