@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
                     <span id="qty-${index}">${item.quantity || 1}</span>
                     <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                    <button class="remove-btn" onclick="removeItem(${index})">✕</button>
                 </div>
-                <button class="remove-btn" onclick="removeItem(${index})">✕</button>
             `;
             orderSummary.appendChild(cartItem);
         });

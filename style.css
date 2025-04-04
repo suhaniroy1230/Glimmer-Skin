@@ -1152,9 +1152,6 @@ margin-left: 10px;
 }
 
 @media (max-width: 480px) {
-    .treatment-card {
-        min-width: 90%;
-    }
 
     .about-section h2 {
         font-size: 22px;
