@@ -165,7 +165,7 @@ body {
 
 .header-actions a {
     color: #000;
-    font-size: 14px;
+    font-size: 20px; 
     margin-left: 15px;
     text-decoration: none;
 }
@@ -953,6 +953,50 @@ footer {
     color: #000;
 }
 
+
+.address-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+  
+  .contact-item i {
+    color: #d17d7d;
+    font-size: 18px;
+    padding-top: 3px;
+  }
+  
+  .contact-item p {
+    margin: 0;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 4px;
+    color: #333;
+}
+
+.contact-text {
+    line-height: 1.5;
+    color: #444;
+}
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
